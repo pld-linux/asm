@@ -58,7 +58,7 @@ install -d $RPM_BUILD_ROOT%{_javadir}
 for a in output/dist/lib/*.jar; do
 	jar=${a##*/}
 	cp -a output/dist/lib/$jar $RPM_BUILD_ROOT%{_javadir}/$jar
-	ln -s $jar.jar $RPM_BUILD_ROOT%{_javadir}/${jar%%-%{version}.jar}.jar
+	ln -s $jar $RPM_BUILD_ROOT%{_javadir}/${jar%%-%{version}.jar}.jar
 done
 
 # javadoc
